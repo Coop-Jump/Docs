@@ -1,0 +1,25 @@
+
+
+services:
+  postgres:
+    image: postgres:16-alpine #imagen de postgreSQL usada
+    container_name: game_db #esto se usa para que docker no le ponga un nombre generico largo al container que crea, nombre del container simple
+    environment: #ayuda a postgress a encontrar las variables en .env
+      POSTGRES_USER: ${POSTGRES_USER:-game_user} #solo con POSTGRES_USER anda pero lo orto es para que si no encuentra eso en .env use ese archivo default
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-game_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-game_db}
+    ports: #Puertos default de POSTGRESQL, el primero no conviene cambiarlo el segundo si se puede pero es a desicon del usuario
+      - "5432:5432"
+    volumes: #Un volumen es como un disco rígido externo que le enchufás al contenedor
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-game_user} -d ${POSTGRES_DB:-game_db}"] # es la prueba con la que el docker pregunta si la base de datos está aceptando conexiones para este usuario y esta base
+      interval: 10s #cada cuanto repite el test
+      timeout: 5s  #si tarda mas de 5 segundos es considerada fallida
+      retries: 5  #si falla 5 veces seguidas, docker pone al contenedor en estado unhealthy
+    restart: unless-stopped
+
+volumes: #definir ese disco rigido, para que funcione el de arriba
+  postgres_data:
+    driver: local
