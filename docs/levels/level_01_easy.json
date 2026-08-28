@@ -1,0 +1,22 @@
+{
+  "title": "Primeros Pasos",
+  "difficulty": "easy",
+  "grid_json": {
+    "grid_width": 20,
+    "grid_height": 15,
+    "cell_size": 32,
+    "spawn_j1": { "x": 1, "y": 13 },
+    "spawn_j2": { "x": 18, "y": 13 },
+    "goal": { "x": 10, "y": 1 },
+    "platforms": [
+      { "x": 0, "y": 14, "width": 20, "height": 1, "type": "ground" },
+      { "x": 3, "y": 11, "width": 4, "height": 1, "type": "platform" },
+      { "x": 13, "y": 11, "width": 4, "height": 1, "type": "platform" },
+      { "x": 7, "y": 8, "width": 6, "height": 1, "type": "platform" },
+      { "x": 5, "y": 5, "width": 10, "height": 1, "type": "platform" },
+      { "x": 9, "y": 2, "width": 2, "height": 1, "type": "goal_platform" }
+    ],
+    "hazards": [],
+    "collectibles": []
+  }
+}
