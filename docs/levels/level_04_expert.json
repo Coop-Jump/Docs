@@ -1,0 +1,57 @@
+{
+  "title": "El Desafío Supremo",
+  "difficulty": "expert",
+  "grid_json": {
+    "grid_width": 32,
+    "grid_height": 22,
+    "cell_size": 32,
+    "spawn_j1": { "x": 1, "y": 20 },
+    "spawn_j2": { "x": 30, "y": 20 },
+    "goal": { "x": 16, "y": 1 },
+    "platforms": [
+      { "x": 0, "y": 21, "width": 32, "height": 1, "type": "ground" },
+      { "x": 2, "y": 18, "width": 2, "height": 1, "type": "platform" },
+      { "x": 28, "y": 18, "width": 2, "height": 1, "type": "platform" },
+      { "x": 5, "y": 16, "width": 3, "height": 1, "type": "platform" },
+      { "x": 24, "y": 16, "width": 3, "height": 1, "type": "platform" },
+      { "x": 4, "y": 14, "width": 2, "height": 1, "type": "moving", "move_range": 3, "move_speed": 1 },
+      { "x": 26, "y": 14, "width": 2, "height": 1, "type": "moving", "move_range": 3, "move_speed": 1 },
+      { "x": 8, "y": 12, "width": 4, "height": 1, "type": "platform" },
+      { "x": 20, "y": 12, "width": 4, "height": 1, "type": "platform" },
+      { "x": 6, "y": 10, "width": 2, "height": 1, "type": "platform" },
+      { "x": 24, "y": 10, "width": 2, "height": 1, "type": "platform" },
+      { "x": 10, "y": 8, "width": 3, "height": 1, "type": "platform" },
+      { "x": 19, "y": 8, "width": 3, "height": 1, "type": "platform" },
+      { "x": 8, "y": 6, "width": 2, "height": 1, "type": "disappearing", "disappear_delay": 1000 },
+      { "x": 22, "y": 6, "width": 2, "height": 1, "type": "disappearing", "disappear_delay": 1000 },
+      { "x": 12, "y": 4, "width": 8, "height": 1, "type": "platform" },
+      { "x": 15, "y": 2, "width": 2, "height": 1, "type": "platform" },
+      { "x": 15, "y": 0, "width": 2, "height": 1, "type": "goal_platform" }
+    ],
+    "hazards": [
+      { "x": 3, "y": 17, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 28, "y": 17, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 6, "y": 15, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 25, "y": 15, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 9, "y": 13, "width": 14, "height": 1, "type": "lava", "damage": 2 },
+      { "x": 7, "y": 11, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 24, "y": 11, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 11, "y": 9, "width": 10, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 9, "y": 7, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 22, "y": 7, "width": 1, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 13, "y": 5, "width": 6, "height": 1, "type": "spikes", "damage": 1 },
+      { "x": 14, "y": 3, "width": 4, "height": 1, "type": "lava", "damage": 2 }
+    ],
+    "collectibles": [
+      { "x": 3, "y": 17, "type": "coin" },
+      { "x": 28, "y": 17, "type": "coin" },
+      { "x": 5, "y": 15, "type": "coin" },
+      { "x": 26, "y": 15, "type": "coin" },
+      { "x": 9, "y": 11, "type": "coin" },
+      { "x": 22, "y": 11, "type": "coin" },
+      { "x": 11, "y": 7, "type": "gem" },
+      { "x": 20, "y": 7, "type": "gem" },
+      { "x": 15, "y": 3, "type": "star" }
+    ]
+  }
+}
