@@ -1,3 +1,9 @@
+<!-- calidad:inicio -->
+![Calidad](https://img.shields.io/badge/Calidad-sin%20c%C3%B3digo-lightgrey)
+
+**Calidad de servicios:** sin código en `main` (no evaluable).
+<!-- calidad:fin -->
+
 # Coop-Jump — Documentación de Orquestación
 
 Repositorio central de infraestructura y documentación del proyecto **Coop-Jump**, un juego cooperativo por niveles. Este repositorio contiene la configuración de orquestación (Docker Compose), el esquema de base de datos, los datos iniciales y la documentación necesaria para levantar el ecosistema completo.
